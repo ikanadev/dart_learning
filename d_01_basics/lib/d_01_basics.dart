@@ -73,3 +73,28 @@ void variables() {
   ]; // days will never change so it's okay to use const
   print('students: $days');
 }
+
+class Person {
+  late String name;
+  late String lastName;
+}
+
+void operators() {
+  print('#####OPERATORS#####');
+  // Most common operations are allowed, we will review the special operators
+  // Ternary operator are allowed
+  var limit = 10;
+  var isHuge = limit >= 10 ? true : false;
+  print('isHuge: $isHuge');
+
+  String? name;
+  // if name is null greeting takes the 'Hello' value
+  String greeting = name ?? 'Hello';
+  print('greeting: $greeting');
+
+  // Cascade notation, it helps to assign values to classes
+  var person = Person()
+    ..name = 'John'
+    ..lastName = 'Smith';
+  print('person: $person');
+}
