@@ -98,3 +98,7 @@ void operators() {
     ..lastName = 'Smith';
   print('person: $person');
 }
+
+// Imports:
+// import 'dart:html';    // std library import
+// import 'package:test/test.dart'; // 3rd party libs import
