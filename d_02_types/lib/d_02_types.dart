@@ -1,4 +1,5 @@
 void builtIn() {
+  print('#####BUILT-IN#######');
   // we have
   // Numbers: int, double
   // Strings: String
@@ -36,6 +37,7 @@ create
 }
 
 void records() {
+  print('#####RECORDS#######');
   // Records allow to bundle multiple objects into a single one, they're fixed and immutable.
   (String, int) person = ('Dan', 23);
   print(person);
@@ -49,4 +51,43 @@ void records() {
   var (name, age) = person;
   print(name);
   print(age);
+}
+
+void collections() {
+  print('#####COLLECTIONS#######');
+  // List, Set and Map
+
+  // Lists
+  // Lists are just arrays
+  List<String> list = [];
+  list.add('hey');
+  print(list[0]);
+
+  // Sets
+  // a collection of unique objects, they can not be accessed by index
+  Set<int> numbers = {2, 3, 4};
+  numbers.add(5);
+  print(numbers.first);
+
+  // Maps
+  // a collection of key: value elements
+  Map<String, double> prices = {
+    'orange': 3.5,
+    'apple': 2.5,
+    'berry': 3.5,
+  };
+  prices['banana'] = 2.0;
+  print(prices['banana']);
+
+  // Operations
+  // Loop: List and Set can be iterated using for  loops
+  for (var price in numbers) {
+    print(price);
+  }
+  // Spread and if-flow
+  var add = true;
+  Set<int> numbersV2 = {1, ...numbers, 2, if (add) 8};
+  print(numbersV2);
+  Set<String> strNumbers = {for (var n in numbersV2) '$n'};
+  print(strNumbers);
 }
