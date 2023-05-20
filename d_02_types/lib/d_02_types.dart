@@ -88,6 +88,6 @@ void collections() {
   var add = true;
   Set<int> numbersV2 = {1, ...numbers, 2, if (add) 8};
   print(numbersV2);
-  Set<String> strNumbers = {for (var n in numbersV2) '$n'};
+  Set<String> strNumbers = {for (var n in numbersV2) '#$n'};
   print(strNumbers);
 }
