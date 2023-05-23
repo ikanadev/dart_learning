@@ -91,3 +91,20 @@ void collections() {
   Set<String> strNumbers = {for (var n in numbersV2) '#$n'};
   print(strNumbers);
 }
+
+void generics() {
+  print('#####GENERICS#######');
+  T first<T>(List<T> list) {
+    return list[0];
+  }
+
+  print(first(<int>[2, 3]));
+  print(first(<String>['first', 'second']));
+}
+
+typedef Grades = List<int>;
+void typeDefs() {
+  print('#####TYPE DEFS#######');
+  Grades grades = <int>[25, 30, 60];
+  print(grades);
+}

@@ -4,4 +4,6 @@ void main(List<String> arguments) {
   types.builtIn();
   types.records();
   types.collections();
+  types.generics();
+  types.typeDefs();
 }
